@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.0'
 
+# Sorted alphabetically
 # Standard Rails gems
 gem 'bcrypt', '3.1.11'
 gem 'coffee-rails', '4.2.1'
@@ -17,7 +18,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin]
 # Font-awesome: https://github.com/FortAwesome/font-awesome-sass
 gem 'font-awesome-sass', '4.7.0'
 
-# Custom gems
+# Custom gems for this application that are distributed for public use
 def custom_gem(gem_name)
   gem gem_name, git: "https://github.com/wazery/#{gem_name}", branch: 'master'
 end

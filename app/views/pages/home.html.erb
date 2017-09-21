@@ -1,28 +1,36 @@
-<% title("Current Weather") %>
-<h1><i class="fa fa-home"></i> Current Weather <small>Powered by OpenWeather API</small></h1>
+<% title('Weather Now') %>
 
-<%= form_for(@address) do |f| %>
-    <% if @address.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@address.errors.count, "error") %> prohibited this address from being saved:</h2>
+<h1><i class="fa fa-bolt"></i>Weather Now <small>Powered by OpenWeather API</small></h1>
 
-          <ul>
-            <% @address.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+<p>You can get the weather of any place just by selecting it on the map, and hitting the <strong>Get Weather</strong> button</p>
 
-    <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
+<!-- Google Maps Location Picker -->
+<div class="col-sm-8">
+  <%= render_gmap_coordinate_picker zoom_level: 10, autocomplete: { enable: true, class: 'form-control' }  %>
+  <br>
+  <a href="#" class="btn btn-primary">Get Weather</a>
+</div>
+
+<!-- City Info Card -->
+<div class="col-sm-4">
+  <div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="<%= gmap_home_thumb %>" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Berlin</h4>
+      <p class="card-text">
+        <strong>Latitude: </strong>30.0<br />
+        <strong>Longitude: </strong>30.0<br />
+        <br />
+        <strong>Weather Temp Min: </strong>30.0<br />
+        <strong>Weather Temp Max: </strong>30.0<br />
+        <br />
+        <strong>Humdity: </strong>20%<br />
+        <strong>Pressure: </strong>20%<br />
+        <strong>Wind Speed: </strong>20%<br />
+        <br />
+        <strong>Sunrise: </strong>20%<br />
+        <strong>Sunset: </strong>20%<br />
+      </p>
     </div>
-    <div class="field">
-      <%= f.gmap_coordinate_picker %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-<% end %>
+  </div>
+</div>
