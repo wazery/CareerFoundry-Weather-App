@@ -1,5 +1,5 @@
 MapPicker.configure do |config|
-  # config.api_key    = 'AIzaSyBhdfWaDqRCBxKAyOUqvAS3kPVoVl1QnGA'
+  # config.api_key    = Rails.application.secrets.gmap_api_key
   config.lat_column = :latitude
   config.lng_column = :longitude
   config.default_coordinates = [52.520199, 13.409859]

@@ -6,7 +6,7 @@ module ApplicationHelper
 
   def gmap_home_thumb(options = {})
     loc     = "#{options[:latitude]},#{options[:longitude]}" || '52.520199,13.409859'
-    api_key = options[:api_key] || 'AIzaSyDxNWHW7A9uMl5Jw9FhFV05so8I7tyycCE'
+    api_key = options[:api_key] || Rails.application.secrets.gmap_static_maps_api_key
     size    = options[:size] || '256x256'
     zoom    = options[:zoom] || '12'
 
