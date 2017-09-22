@@ -8,6 +8,12 @@ development:
   <<: *defaults
   database: db/development.sqlite3
 
+production:
+  adapter: postgresql
+  database: my_database_production
+  pool: 5
+  timeout: 5000
+
 test:
   <<: *defaults
   database: db/test.sqlite3

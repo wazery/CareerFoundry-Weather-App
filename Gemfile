@@ -32,7 +32,10 @@ custom_gem 'horus'
 # Bootstrap 3: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '3.3.7'
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'byebug', '9.0.6'
