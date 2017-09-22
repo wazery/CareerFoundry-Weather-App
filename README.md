@@ -17,7 +17,7 @@ https://cf-weather-app.herokuapp.com
 
 # Seperated Gems
 
-While working on the application I decided to split the code into 2 gems, so I provide something to the community to be used.
+While working on the application I decided to split the code into 2 gems, so I can provide something back to the community.
 
 The first gem is called [Horus](https://github.com/wazery/horus), which is a Ruby wrapper around the OpenWeather API, so users can grap the current weather info by either city, coordinates (latitude, longitude) or zipcode.
 
