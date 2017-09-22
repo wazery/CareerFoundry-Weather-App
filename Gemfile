@@ -3,6 +3,7 @@ ruby '2.4.0'
 
 # Sorted alphabetically
 # Standard Rails gems
+gem 'apipie-rails'
 gem 'bcrypt', '3.1.11'
 gem 'coffee-rails', '4.2.1'
 gem 'jquery-rails', '4.2.2'
@@ -34,7 +35,6 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'rails_12factor', group: :production
 
 group :development, :test do
-  gem 'apipie-rails'
   gem 'byebug', '9.0.6'
 
   # Static code analyzer
