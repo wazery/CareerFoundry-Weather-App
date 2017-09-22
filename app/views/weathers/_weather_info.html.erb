@@ -8,15 +8,12 @@
         <strong>Latitude: </strong><%= @weather[:latitude] %><br />
         <strong>Longitude: </strong><%= @weather[:longitude] %><br />
         <br />
-        <strong>Weather Temp Min: </strong><%= @weather[:temp_min] %><br />
-        <strong>Weather Temp Max: </strong><%= @weather[:temp_max] %><br />
+        <strong>Weather Temp Min: </strong><%= @weather[:temp_min].to_s[0..1] %>º C<br />
+        <strong>Weather Temp Max: </strong><%= @weather[:temp_max].to_s[0..1] %>º C<br />
         <br />
         <strong>Humdity: </strong><%= @weather[:humidity] %><br />
-        <strong>Pressure: </strong><%= @weather[:pressure] %><br />
-        <strong>Wind Speed: </strong><%= @weather[:wind_speed] %><br />
-        <br />
-        <strong>Sunrise: </strong>20%<br />
-        <strong>Sunset: </strong>20%<br />
+        <strong>Pressure: </strong><%= @weather[:pressure] %> Pa<br />
+        <strong>Wind Speed: </strong><%= @weather[:wind_speed] %> km/h<br />
       </p>
     </div>
   </div>
