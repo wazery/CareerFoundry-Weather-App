@@ -14,9 +14,6 @@ gem 'redis-rack-cache'
 gem 'sass-rails', '5.0.6'
 gem 'uglifier', '3.1.6'
 
-# Necessary for Windows OS (won't install on *nix systems)
-gem 'tzinfo-data', platforms: %i[mingw mswin]
-
 # Font-awesome: https://github.com/FortAwesome/font-awesome-sass
 gem 'font-awesome-sass', '4.7.0'
 
@@ -26,8 +23,7 @@ def custom_gem(gem_name)
 end
 
 # For picking lat, lon from Google Map
-# custom_gem 'mappicker'
-gem 'map_picker', path: '~/Workspace/gems/map_picker'
+custom_gem 'map_picker'
 
 # Provides Ruby wrapper for the OpenWeather API
 custom_gem 'horus'
@@ -36,7 +32,7 @@ custom_gem 'horus'
 gem 'bootstrap-sass', '3.3.7'
 
 group :development, :test do
-  gem 'apipie'
+  gem 'apipie-rails'
   gem 'byebug', '9.0.6'
 
   # Static code analyzer
