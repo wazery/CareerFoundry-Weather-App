@@ -7,9 +7,9 @@ GIT
       rest-client (~> 2.0)
 
 PATH
-  remote: ../gems/gmap_coordinates_picker
+  remote: ../gems/map_picker
   specs:
-    gmap_coordinates_picker (0.0.7)
+    map_picker (0.0.7)
       rails (>= 3.1.0)
 
 GEM
@@ -269,9 +269,9 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   font-awesome-sass (= 4.7.0)
-  gmap_coordinates_picker!
   horus!
   jquery-rails (= 4.2.2)
+  map_picker!
   rails (= 4.2.8)
   redis
   redis-namespace

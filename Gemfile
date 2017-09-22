@@ -27,8 +27,7 @@ end
 
 # For picking lat, lon from Google Map
 # custom_gem 'mappicker'
-# gem 'mappicker', path: '~/Workspace/gems/mappicker'
-gem 'gmap_coordinates_picker', path: '~/Workspace/gems/gmap_coordinates_picker'
+gem 'map_picker', path: '~/Workspace/gems/map_picker'
 
 # Provides Ruby wrapper for the OpenWeather API
 custom_gem 'horus'
