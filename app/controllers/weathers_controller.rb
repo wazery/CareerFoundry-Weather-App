@@ -4,12 +4,19 @@
 # OpenWeather API is issued, to get the weather data for that location
 # then a card is shown at right displaying the weather data
 class WeathersController < ApplicationController
+  ################# Documentation ##############################################
   # GET /display_map
+  api :GET, '/display_map', 'Renders the map to the users so they can select loc'
+  ################# /Documentation #############################################
   def display_map
   end
 
+  ################# Documentation ##############################################
   # POST /query_for_weather
-  # TODO: Implement and fix Redis caching
+  api :POST, '/query_for_weather', 'Issue the query to OpenWeather API'
+  param :longitude, String, desc: 'The longitude to be searched', required: true
+  param :latitude, String, desc: 'The latitude to be searched', required: true
+  ################# /Documentation #############################################
   def query_for_weather
     weather = get_weather_from_cache(params)
 
@@ -28,7 +35,10 @@ class WeathersController < ApplicationController
     end
   end
 
+  ################# Documentation ##############################################
   # GET /display_weather
+  api :GET, '/display_weather', 'Display the returned weather data to user'
+  ################# /Documentation #############################################
   def display_weather
     @weather = params[:weather]
   end
