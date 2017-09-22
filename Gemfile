@@ -9,8 +9,8 @@ gem 'jquery-rails', '4.2.2'
 gem 'rails', '4.2.8'
 gem 'redis'
 gem 'redis-namespace'
-gem 'redis-rails'
 gem 'redis-rack-cache'
+gem 'redis-rails'
 gem 'sass-rails', '5.0.6'
 gem 'uglifier', '3.1.6'
 
@@ -51,6 +51,6 @@ gem 'web-console', '3.3.0', group: :development
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'selenium-webdriver'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end

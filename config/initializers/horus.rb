@@ -2,7 +2,7 @@
 Horus.configure do |config|
   # API key
   # TODO: Move this to the secrets file
-  config.api_key = "8804c50b4d95600b305729e63ea85ce2"
+  config.api_key = Rails.application.secrets.open_weather_api_key
 
   # Optionals
   config.default_language = 'ar'     # 'en' by default

@@ -6,10 +6,9 @@
 class WeathersController < ApplicationController
   ################# Documentation ##############################################
   # GET /display_map
-  api :GET, '/display_map', 'Renders the map to the users so they can select loc'
+  api :GET, '/display_map', 'Render the map to the users so they can select loc'
   ################# /Documentation #############################################
-  def display_map
-  end
+  def display_map; end
 
   ################# Documentation ##############################################
   # POST /query_for_weather
@@ -52,11 +51,11 @@ class WeathersController < ApplicationController
   end
 
   def get_weather_from_cache(params)
-    JSON.load($redis.get("#{params[:latitude]},#{params[:longitude]}"))
+    JSON.parse($redis.get("#{params[:latitude]},#{params[:longitude]}"))
   end
 
   def set_weather(response)
-    weather = {
+    {
       place_name: response[:name],
       latitude: response[:coord][:lat],
       longitude: response[:coord][:lon],
@@ -66,7 +65,7 @@ class WeathersController < ApplicationController
       pressure: response[:main][:pressure],
       wind_speed: response[:wind][:speed],
       sunrise: response[:sys][:sunrise],
-      sunset: response[:sys][:sunset],
+      sunset: response[:sys][:sunset]
     }
   end
 end
