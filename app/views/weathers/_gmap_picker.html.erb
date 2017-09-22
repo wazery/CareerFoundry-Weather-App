@@ -5,7 +5,7 @@
       <% coord = @weather ? [@weather[:latitude], @weather[:longitude]] : [52.520199, 13.409859] %>
       <%= render_map_picker zoom_level: 10, default_coordinates: coord, autocomplete: { enable: true, class: 'form-control' }, api_key: 'AIzaSyBhdfWaDqRCBxKAyOUqvAS3kPVoVl1QnGA' %>
       <br>
-      <div class="actions"><%= submit_tag 'Get Weather', class: 'btn btn-primary' %></div>
+      <div class="actions"><%= submit_tag 'Get Weather', class: 'btn btn-primary', id: 'getWeather' %></div>
     </div>
   <% end -%>
 </div>

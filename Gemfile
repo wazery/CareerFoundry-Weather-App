@@ -37,10 +37,6 @@ gem 'bootstrap-sass', '3.3.7'
 
 group :development, :test do
   gem 'byebug', '9.0.6'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-  gem 'rspec'
-  gem 'web-console', '3.3.0'
 
   # Static code analyzer
   gem 'rubocop'
@@ -51,4 +47,13 @@ group :development, :test do
   # Annotate_Models: https://github.com/ctran/annotate_models
   gem 'annotate', '2.7.1'
   gem 'sqlite3', '1.3.11'
+end
+
+gem 'web-console', '3.3.0', group: :development
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'rspec-rails'
 end
