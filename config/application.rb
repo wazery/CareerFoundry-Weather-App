@@ -9,6 +9,10 @@ Bundler.require(:default, Rails.env)
 module CareerfoundryWeather
   # The Rails application
   class Application < Rails::Application
+    # Didn't add them to the secrets.ymal file cause the app is not confidential
+    HTTP_AUTH_USERNAME = 'cf_docs_admin'
+    HTTP_AUTH_PASSWORD = 'cf@weather$app%'
+
     I18n.enforce_available_locales = false
 
     # Test framework
