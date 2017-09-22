@@ -22,9 +22,11 @@ class WeathersController < ApplicationController
     if weather.nil?
       begin
         weather = issue_query(params)
+
         $redis.set("#{params[:latitude]},#{params[:longitude]}", weather.to_json)
         # Expire the cache, every 3 hours
         $redis.expire('weathers', 3.hour.to_i)
+
         redirect_to display_weather_path(weather: weather), notice: 'Weather was successfully retrived.'
       rescue Exception
         redirect_to root_path, alert: "Can't get the weather for this location!"
@@ -51,7 +53,7 @@ class WeathersController < ApplicationController
   end
 
   def get_weather_from_cache(params)
-    JSON.parse($redis.get("#{params[:latitude]},#{params[:longitude]}"))
+    JSON.load($redis.get("#{params[:latitude]},#{params[:longitude]}"))
   end
 
   def set_weather(response)
