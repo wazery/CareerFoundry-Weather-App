@@ -9,11 +9,12 @@ Bundler.require(:default, Rails.env)
 module CareerfoundryWeather
   # The Rails application
   class Application < Rails::Application
-    # turn off warnings triggered by friendly_id
     I18n.enforce_available_locales = false
 
     # Test framework
     config.generators.test_framework false
+
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
 
     # autoload lib path
     config.autoload_paths += %W[#{config.root}/lib]

@@ -6,13 +6,11 @@ GIT
     horus (0.1.0)
       rest-client (~> 2.0)
 
-GIT
-  remote: https://github.com/wazery/mappicker
-  revision: 962449d87c22d690a5d59e9b9384879bf292c19d
-  branch: master
+PATH
+  remote: ../gems/gmap_coordinates_picker
   specs:
-    mappicker (0.1.0)
-      rails
+    gmap_coordinates_picker (0.0.7)
+      rails (>= 3.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -114,9 +112,6 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
-    jbuilder (2.6.3)
-      activesupport (>= 3.0.0, < 5.2)
-      multi_json (~> 1.2)
     jquery-rails (4.2.2)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -142,6 +137,8 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.0)
     rack (1.6.8)
+    rack-cache (1.6.1)
+      rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.8)
@@ -174,6 +171,28 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (3.3.3)
+    redis-actionpack (5.0.1)
+      actionpack (>= 4.0, < 6)
+      redis-rack (>= 1, < 3)
+      redis-store (>= 1.1.0, < 1.4.0)
+    redis-activesupport (5.0.3)
+      activesupport (>= 3, < 6)
+      redis-store (~> 1.3.0)
+    redis-namespace (1.5.3)
+      redis (~> 3.0, >= 3.0.4)
+    redis-rack (2.0.2)
+      rack (>= 1.5, < 3)
+      redis-store (>= 1.2, < 1.4)
+    redis-rack-cache (2.0.1)
+      rack-cache (~> 1.6.0)
+      redis-store (~> 1.3.0)
+    redis-rails (5.0.2)
+      redis-actionpack (>= 5.0, < 6)
+      redis-activesupport (>= 5.0, < 6)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.3.0)
+      redis (>= 2.2)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -223,9 +242,6 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
-    turbolinks (5.0.1)
-      turbolinks-source (~> 5)
-    turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.1.6)
@@ -253,17 +269,19 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   font-awesome-sass (= 4.7.0)
+  gmap_coordinates_picker!
   horus!
-  jbuilder (= 2.6.3)
   jquery-rails (= 4.2.2)
-  mappicker!
   rails (= 4.2.8)
+  redis
+  redis-namespace
+  redis-rack-cache
+  redis-rails
   rspec
   rubocop
   sass-rails (= 5.0.6)
   spring (= 2.0.1)
   sqlite3 (= 1.3.11)
-  turbolinks (= 5.0.1)
   tzinfo-data
   uglifier (= 3.1.6)
   web-console (= 3.3.0)

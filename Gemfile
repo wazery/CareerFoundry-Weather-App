@@ -5,11 +5,13 @@ ruby '2.4.0'
 # Standard Rails gems
 gem 'bcrypt', '3.1.11'
 gem 'coffee-rails', '4.2.1'
-gem 'jbuilder', '2.6.3'
 gem 'jquery-rails', '4.2.2'
 gem 'rails', '4.2.8'
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
 gem 'sass-rails', '5.0.6'
-gem 'turbolinks', '5.0.1'
 gem 'uglifier', '3.1.6'
 
 # Necessary for Windows OS (won't install on *nix systems)
@@ -24,7 +26,9 @@ def custom_gem(gem_name)
 end
 
 # For picking lat, lon from Google Map
-custom_gem 'mappicker'
+# custom_gem 'mappicker'
+# gem 'mappicker', path: '~/Workspace/gems/mappicker'
+gem 'gmap_coordinates_picker', path: '~/Workspace/gems/gmap_coordinates_picker'
 
 # Provides Ruby wrapper for the OpenWeather API
 custom_gem 'horus'

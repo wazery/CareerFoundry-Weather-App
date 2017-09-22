@@ -1,0 +1,10 @@
+<!-- Google Maps Location Picker -->
+<div class="col-sm-8">
+  <%= form_tag('/query_for_weather') do %>
+    <div>
+      <%= render_gmap_coordinate_picker zoom_level: 10, default_coordinates: [@weather[:latitude], @weather[:longitude]], autocomplete: { enable: true, class: 'form-control' }, api_key: 'AIzaSyBhdfWaDqRCBxKAyOUqvAS3kPVoVl1QnGA'  %>
+      <br>
+      <div class="actions"><%= submit_tag 'Get Weather', class: 'btn btn-primary' %></div>
+    </div>
+  <% end -%>
+</div>

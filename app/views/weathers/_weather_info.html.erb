@@ -1,0 +1,23 @@
+<!-- City Info Card -->
+<div class="col-sm-4">
+  <div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="<%= gmap_home_thumb(@weather) %>" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"><%= @weather[:place_name] %></h4>
+      <p class="card-text">
+        <strong>Latitude: </strong><%= @weather[:latitude] %><br />
+        <strong>Longitude: </strong><%= @weather[:longitude] %><br />
+        <br />
+        <strong>Weather Temp Min: </strong><%= @weather[:temp_min] %><br />
+        <strong>Weather Temp Max: </strong><%= @weather[:temp_max] %><br />
+        <br />
+        <strong>Humdity: </strong><%= @weather[:humidity] %><br />
+        <strong>Pressure: </strong><%= @weather[:pressure] %><br />
+        <strong>Wind Speed: </strong><%= @weather[:wind_speed] %><br />
+        <br />
+        <strong>Sunrise: </strong>20%<br />
+        <strong>Sunset: </strong>20%<br />
+      </p>
+    </div>
+  </div>
+</div>
