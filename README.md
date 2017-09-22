@@ -36,3 +36,5 @@ I wrote some features and step definations for the application. I used Cucumber 
 # TDD
 
 I also wrote some controller tests using RSpec testing framework.
+
+![RSpec Test Output](https://i.imgur.com/iFMDTV6.png)
