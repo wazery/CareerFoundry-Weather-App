@@ -7,7 +7,6 @@ gem 'actionview',    '~>4.2.5'
 gem 'activesupport',  '~> 4.2.5' # All things we like
 gem 'apipie-rails'
 gem 'bcrypt', '3.1.11'
-gem 'coffee-rails', '4.2.1'
 gem 'sprockets', '>= 3.0.0'
 gem 'jquery-rails', '4.2.2'
 gem 'redis'
@@ -47,15 +46,12 @@ group :development, :test do
   # Spring: https://github.com/rails/spring
   gem 'spring', '2.0.1'
 
-  # Annotate_Models: https://github.com/ctran/annotate_models
-  gem 'annotate', '2.7.1'
 end
 
 gem 'web-console', '3.3.0', group: :development
 
 group :test do
   gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
