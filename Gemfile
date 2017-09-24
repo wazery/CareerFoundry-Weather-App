@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 
 # Sorted alphabetically
-# Standard Rails gems
+# Standard Rails gems, using only what is needed
+gem 'actionview',    '~>4.2.5'
+gem 'activesupport',  '~> 4.2.5' # All things we like
 gem 'apipie-rails'
 gem 'bcrypt', '3.1.11'
 gem 'coffee-rails', '4.2.1'
+gem 'sprockets', '>= 3.0.0'
 gem 'jquery-rails', '4.2.2'
-gem 'rails', '4.2.8'
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rack-cache'
@@ -34,7 +36,6 @@ gem 'bootstrap-sass', '3.3.7'
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
 
 group :development, :test do
@@ -48,7 +49,6 @@ group :development, :test do
 
   # Annotate_Models: https://github.com/ctran/annotate_models
   gem 'annotate', '2.7.1'
-  gem 'sqlite3', '1.3.11'
 end
 
 gem 'web-console', '3.3.0', group: :development
