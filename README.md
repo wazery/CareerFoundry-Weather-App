@@ -49,4 +49,14 @@ I thought of getting a VPS on DigitalOccean and deploy a Kubernetes cluster and 
 
 For the health monitoring, error reporting, auto scalling, and service discovery Kubernetes would do a very well job especially if it's used with Grafana and a timeseries database, so we can have a central place for our logs. I am thinking of this infrastructure for CF actually.
 
-Also I would think of having a CI/CD server setup, for our code review process, and automatic deployments. 
+Also I would think of having a CI/CD server setup, for our code review process, and automatic deployments.
+
+Using a SAAS like NewRelic would be good also for knowing the bottlenecks of our codebase performence.
+
+# Secrets
+
+I kept all the secret tokens and API keys in the `config/secrets.yml`, which is not included in the repo. I will send it via email, just in case you want to run the application locally.
+
+# Code Style
+
+I added the awesome static analyzer `Rubocop`, to make the code aligned with the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide), I tried to make the code aligned to it, but there are some minor errors that I thought not to spend time on them, as the idea is delivered of being aligned to the Ruby style guide in most of the code base.
