@@ -60,3 +60,7 @@ I kept all the secret tokens and API keys in the `config/secrets.yml`, using env
 # Code Style
 
 I added the awesome static analyzer `Rubocop`, to make the code aligned with the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide), I tried to make the code aligned to it, but there are some minor errors that I thought not to spend time on them, as the idea is delivered of being aligned to the Ruby style guide in most of the code base.
+
+# Controller Documentation
+
+I used the awesome API documentation gem `Apipie` to document controller endpoints. If the app is an API only, this gem would be of the best use, so we can have a central documenation place for the API so the front end developers and any one who want to consume the API can make use of.
