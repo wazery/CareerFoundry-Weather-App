@@ -43,6 +43,8 @@ I also wrote some controller tests using RSpec testing framework.
 
 ![RSpec Test Output](https://i.imgur.com/iFMDTV6.png)
 
+I would also add a test coverage gem like `simplecov`, so we can get a better insight of how are the tests covering the codebase.
+
 # Deployment
 
 I thought of getting a VPS on DigitalOccean and deploy a Kubernetes cluster and provide a dashboard access for it, just to get my hands in more DevOps in this task, then I thought it would be an overkill, so I deployed the app to Heroku.
