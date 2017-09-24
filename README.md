@@ -55,7 +55,7 @@ Using a SAAS like NewRelic would be good also for knowing the bottlenecks of our
 
 # Secrets
 
-I kept all the secret tokens and API keys in the `config/secrets.yml`, which is not included in the repo. I will send it via email, just in case you want to run the application locally.
+I kept all the secret tokens and API keys in the `config/secrets.yml`, using environment variables. I will send these variables via email, just in case you want to run the application locally.
 
 # Code Style
 
