@@ -47,6 +47,6 @@ I also wrote some controller tests using RSpec testing framework.
 
 I thought of getting a VPS on DigitalOccean and deploy a Kubernetes cluster and provide a dashboard access for it, just to get my hands in more DevOps in this task, then I thought it would be an overkill, so I deployed the app to Heroku.
 
-For the health monitoring, error reporting, and service discovery Kubernetes would do a very well job especially if it's used with Grafana and a timeseries database, so we can have a central place for our logs. I am thinking of this infrastructure for CF actually.
+For the health monitoring, error reporting, auto scalling, and service discovery Kubernetes would do a very well job especially if it's used with Grafana and a timeseries database, so we can have a central place for our logs. I am thinking of this infrastructure for CF actually.
 
 Also I would think of having a CI/CD server setup, for our code review process, and automatic deployments. 
